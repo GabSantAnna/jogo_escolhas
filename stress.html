@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+        
+    <head>
+        <meta charset="UTF-8"> 
+    </head>
+    <body>
+        <script>
+               
+
+            function start (){
+              objetivo();
+              // bonus + ajuda
+                if(desafioUm() ==1) {
+                    if(espiritoUm()== 1){
+                        if(desafioDois() == 2) {
+                            if(espiritoDois() == 2) {
+                                if(desafioTres() == 2) {
+                                    alert("coraçao guerreiro")
+                                }
+                            }
+                        }
+                    } else { //sem ajuda com bonus
+                        if(desafioDois() == 2) {
+                            if(espiritoDois() == 1) {
+                                if (desafioTres() == 2) {
+                                    alert("virou rei das trevas")
+                                }
+                            }
+                        }
+                    }
+                }else { //sem bonus, ajudando os espiritos
+                    if (espiritoUm() == 1){
+                        if(desafioDois() == 3) {
+                            if(espiritoDois()== 2){
+                                if(desafioTres() == 2) {
+                                    alert("coraçao puro")
+                                }
+                            }
+                        }
+                    }else { //aqui supostamente  seria a condiçao de derrota, mas vamos testar... testei, deu certo. 
+                        if(desafioDois() == 3) {
+                            if(espiritoDois() == 1){
+                                if(desafioTres() == 2) {
+                                    alert("Perdeu , amadx")
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //falta a condiçao 1 bonus, 1 ajuda. Nem sei como eu vou fazer isso
+        
+            }
+
+            function objetivo () {
+                alert("voce esta bla bla bla.... sabemos que suas açoes em vida sao ifluenciadas por fatores externos. por isso , antes do julgamento voce passara por testes. voce sera julgado por sua essencia e carater em sua forma mais pura.  boa sorte")
+                
+            }
+
+
+            function desafioUm () {
+                alert("desafio um o bonus esta na 1");
+                var escolhaUm = prompt("escolha 1 para ... escolha 2 para ... ou 3 para....");
+                if ( escolhaUm == 1 ) {
+                    alert("vc encontrou o alecrim dourado");
+                    return escolhaUm;
+                } else if (escolhaUm == 2) {
+                    alert("concluiu o desafio");
+                    return escolhaUm;
+                } else if (escolhaUm == 3){ 
+                    alert("perdeu");
+                    start();
+                } else { alert ("resposta invalida");
+                    desafioUm();                
+                }
+
+                return escolhaUm
+               
+            }
+
+            function espiritoUm () {
+                alert("descriçao do local/ espirito pedindo ajuda e tals");
+                var ajudaUm = prompt("1 para ajudar, 2 para negar ajuda");
+                if (ajudaUm == 1) {
+                    alert("gratiluz");
+                    return ajudaUm;
+                } else if (ajudaUm == 2) {
+                    alert("imagine uma liçao de moral aqui");
+                    return ajudaUm;
+                } else {
+                    alert("resposta invalida")
+                    espiritoUm();
+                }
+
+                return ajudaUm
+            }
+
+            function desafioDois () {
+                alert("desafio 2 o bonus esta na 2");
+                var escolhaDois = prompt("1 ..... 2.....3......");
+                if(escolhaDois == 1) {
+                    alert("perdeu");
+                    start();
+                } else if (escolhaDois == 2) {
+                    alert("voce achou o trevo de quatro folhas");
+                    return escolhaDois;
+                }else if (escolhaDois == 3) {
+                    alert("concluiu o desafio");
+                    return escolhaDois;
+                }else {alert("resposta invalida");
+                       desafioDois();
+                }
+
+                return escolhaDois
+            }
+
+            function espiritoDois (){
+                alert("espirito 2 a resposta e 2");
+                var ajudaDois = prompt("1.......2......");
+                if(ajudaDois == 1 ) {
+                    alert("lua redonda, sol quadrado, vc foi arrogante e acabou amaldiçoado");
+                    return ajudaDois
+                } else if (ajudaDois == 2){
+                    alert("gratidao");
+                    return ajudaDois
+                }else {alert("resposta invalida");
+                        espiritoDois()
+                        
+                }
+
+                return ajudaDois
+            }
+
+            function desafioTres() {
+                alert("desafio 3 a resposta esta na 2");
+                var escolhaTres = prompt("1.....2...");
+                if(escolhaTres == 1) {
+                    alert("perdeu");
+                    start();
+                }else if (escolhaTres == 2) {
+                    alert("concliu o desafio");
+                    return escolhaTres
+                } else { alert("resposta invalida"); desafioTres()
+                }
+
+                return escolhaTres
+            }
+
+          
+
+            start()
+
+            
+        </script>
+    </body>
+</html>
+
+<!-- A ideia é estilizar e criar dinamismo na pagina usando DOM, quando eu tiver uma historia e com o codigo pronto->
